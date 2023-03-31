@@ -23,5 +23,5 @@ jobs:
         run: |
           python main.py
       - run: echo "🖥️ print var is $GITHUB_ENV."
-
+      - uses: pre-commit/action@v3.0.0
       - run: echo "🍏 This job's status is ${{ job.status }}."
