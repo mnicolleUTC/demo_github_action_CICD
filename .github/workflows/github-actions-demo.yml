@@ -43,4 +43,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/mnicolle/test_docker:latest
+          tags: ghcr.io/test_docker:latest
