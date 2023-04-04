@@ -42,4 +42,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/dataforgoodfr/Bloom:latest
+          tags: ghcr.io/mnicolle/test_docker:latest
