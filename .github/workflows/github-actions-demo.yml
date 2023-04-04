@@ -28,7 +28,7 @@ jobs:
           AWS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
           AWS_KEY_SECRET: ${{ secrets.AWS_KEY_SECRET }}
       - run: echo "🖥️ La meilleure ecole info c'est ${{ vars.VAR_ECOLE }}"  
-      - run: echo "🍏 This job's status is ${{ job.status }}.""
+      - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Login to GitHub container registry
