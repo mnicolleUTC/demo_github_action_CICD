@@ -2,16 +2,20 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 env:
-  IMAGE_NAME: bloom
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Install python
         uses: actions/setup-python@v2
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
@@ -43,14 +47,14 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: |
-            mnicolle/testpush
-            ghcr.io/${{ github.repository }}
-      
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=sha
       - name: Build and push Docker images
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./Dockerfile
           push: true
-          tags: ghrc.io/mnicolle/test4
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
