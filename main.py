@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import boto3
-from cred import AWS_KEY_ID,AWS_KEY_SECRET
 
 
 def test_secret():
