@@ -38,6 +38,7 @@ jobs:
       - name: Build and Push Docker image to D4G registry
         uses: docker/build-push-action@v2
         with:
+          github-token: ${{ secrets.TOKEN_REGISTERY }}
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
