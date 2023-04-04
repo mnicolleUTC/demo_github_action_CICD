@@ -53,4 +53,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghrc.io/mnicolle/test4:latest
+          tags: ghrc.io/mnicolle/test4
