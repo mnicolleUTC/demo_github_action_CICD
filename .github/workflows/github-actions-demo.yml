@@ -43,4 +43,4 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: mnicolleutc/testimage:latest
+          tags: ${{ steps.meta.outputs.tags }}
