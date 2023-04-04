@@ -43,4 +43,4 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: mnicolleUTC/testimage:latest
+          tags: mnicolleutc/testimage:latest
