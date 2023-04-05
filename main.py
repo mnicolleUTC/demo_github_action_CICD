@@ -22,7 +22,7 @@ if __name__ =="__main__":
     matrix = np.zeros(4)
     df = pd.DataFrame(matrix)
     # Test Boto3
-    test_secret()
+    #test_secret()
     print("Success Loading")
     # Prompt message 
     print("This is commit 1")
