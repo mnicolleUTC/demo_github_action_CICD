@@ -16,8 +16,8 @@ def test_secret():
 
 if __name__ =="__main__":
     # Fetch secret Variable with os
-    AWS_KEY_ID = os.environ['AWS_KEY_ID']
-    AWS_KEY_SECRET = os.environ['AWS_KEY_SECRET']
+    #AWS_KEY_ID = os.environ['AWS_KEY_ID']
+    #AWS_KEY_SECRET = os.environ['AWS_KEY_SECRET']
     # Test lines 
     matrix = np.zeros(4)
     df = pd.DataFrame(matrix)
