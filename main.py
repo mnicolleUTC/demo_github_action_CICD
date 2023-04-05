@@ -24,3 +24,5 @@ if __name__ =="__main__":
     # Test Boto3
     test_secret()
     print("Success Loading")
+    # Prompt message 
+    print("This is commit 1")
